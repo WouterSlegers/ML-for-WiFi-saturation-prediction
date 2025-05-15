@@ -71,7 +71,7 @@ def test_transformers(dataset, x):
     plt.show()
 
 """
-A travesty of a function, it makes Fig. 2 in the report and keeps you updated
+Makes Fig. 2 in the report and keeps you updated
 each step of the way how the models perform on the test set after having used
 only i features from the dataset during the learning and testing stages
 """
@@ -90,7 +90,6 @@ def plot_performance_using_few_features(X_train, y_train, X_test, y_test, max_fe
     indices_sorted = [t[0] for t in sorted_list]
     print("Features ordered by importance given by RFc:\n", indices_sorted)
 
-    indices_sorted = [28, 1, 0, 6, 7, 8, 27, 3, 14, 15, 2, 16, 17, 9, 18, 26, 5, 13, 11, 19, 10, 20, 12, 21, 25, 22, 4, 23, 24]
     ind, accuracies_rf, accuracies_nn = list(), list(), list()
     
     for i in range(1, max_features+1):
